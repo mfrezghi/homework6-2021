@@ -93,21 +93,56 @@ to {width: 425px; opacity:1;}
     .card{
         flex-basis: 250px;
     }
-   
+}
+
+@media (prefers-reduced-motion) {
+    .grow {
+      animation-name: grow;
+    }
+}
+
+@media print {
+    body{
+        background-image: none;
+    }
+
+    .nav_links{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .pricing{
+        display:flex;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    .card{
+        border-style: solid;
+        border-width: 2px;
+        border-color: #45ADDD;
+        flex-basis: 250px;
+    }
+
+    .gallery #gallery{
+        display: none;
+    }
+
+    .card li:first-child::before{
+        content: "👍";
+    }
+    
+    .card li:last-child::before{
+        content: "👍";
+    }
+    
+    .card li:nth-child(2)::before{
+        content: "👍";
+    }
 }
 
 
-
-.card li:first-child::before{
-    content: "";
-}
-
-.card li:last-child::before{
-    content: "";
-}
-
-.card li:nth-child(2)::before{
-    content: "";
-}
 
 
