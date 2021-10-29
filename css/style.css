@@ -5,17 +5,23 @@ body{
 }
 
 header{
-    display: flex;
     flex-direction: column;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
 
 .nav_links{
-    display: flex;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.card header{
+.nav_item a:visited{
+    color: #0000FF;
+}
+
+.card > header{
     background-color: #288088;
     border-style: solid;
     border-width: 2px;
@@ -28,8 +34,9 @@ header{
 
 .pricing{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .card{
@@ -48,26 +55,59 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
-.header{
-    animation: fadeIn 5s;
+#logo{
+    animation-name: grow;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
 }
 
-@keyframes fadeIn {
-0% {width: 50px; opacity:0;}
-100% {width: 425px; opacity:1;}
+@keyframes grow{
+from {width: 50px; opacity:0;}
+to {width: 425px; opacity:1;}
 }
 
-@media only screen and (min-device-width: 850px){
-    header img{
+@media screen and (min-width: 850px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top:0;
+        align-items:start;
+        display:flex;
+    }
+
+    .nav_links {
+        align-items:center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+    }
+    
+    .card > header{
         justify-content: center;
-        align-items: center;
+        position: static;
     }
-    body{
-        color: red;
+
+    .card{
+        flex-basis: 250px;
     }
+   
 }
+
+
+
+.card li:first-child::before{
+    content: "";
+}
+
+.card li:last-child::before{
+    content: "";
+}
+
+.card li:nth-child(2)::before{
+    content: "";
+}
+
+
