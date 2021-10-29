@@ -21,7 +21,7 @@ header{
     color: #0000FF;
 }
 
-.card > header{
+.card>header{
     background-color: #288088;
     border-style: solid;
     border-width: 2px;
@@ -64,6 +64,10 @@ header{
     animation-iteration-count: 1;
 }
 
+footer{
+    background-color: black;
+}
+
 @keyframes grow{
 from {width: 50px; opacity:0;}
 to {width: 425px; opacity:1;}
@@ -85,7 +89,7 @@ to {width: 425px; opacity:1;}
         flex-direction: row;
     }
     
-    .card > header{
+    .card>header{
         justify-content: center;
         position: static;
     }
