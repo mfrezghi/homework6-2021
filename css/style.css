@@ -100,9 +100,10 @@ to {width: 425px; opacity:1;}
     }
 }
 
-@media (prefers-reduced-motion) {
-    .grow {
-      animation-name: grow;
+@media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+      -webkit-animation: initial;
+      animation: initial;
     }
 }
 
