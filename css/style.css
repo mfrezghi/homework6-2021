@@ -106,6 +106,12 @@ to {width: 425px; opacity:1;}
         background-image: none;
     }
 
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .nav_links{
         display: flex;
         justify-content: space-around;
