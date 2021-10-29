@@ -60,15 +60,14 @@ header{
 100% {width: 425px; opacity:1;}
 }
 
-@media only screen and (min-width: 850px){
+@media only screen and (min-device-width: 850px){
     header img{
         display: flex;
-        justify-content: start;
-        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .nav_links{
-        display: flex;
-        justify-content: end;
+    body{
         color: red;
     }
 }
