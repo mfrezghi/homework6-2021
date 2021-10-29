@@ -7,6 +7,7 @@ body{
 header{
     flex-direction: column;
     display:flex;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
 }
@@ -21,7 +22,7 @@ header{
     color: #0000FF;
 }
 
-.card>header{
+.card header{
     background-color: #288088;
     border-style: solid;
     border-width: 2px;
@@ -89,7 +90,7 @@ to {width: 425px; opacity:1;}
         flex-direction: row;
     }
     
-    .card>header{
+    .card header{
         justify-content: center;
         position: static;
     }
@@ -114,6 +115,10 @@ to {width: 425px; opacity:1;}
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    
+    nav{
+        width:100%
     }
 
     .nav_links{
